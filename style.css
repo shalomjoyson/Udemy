@@ -110,16 +110,13 @@ body {
     flex-grow: 1;
     flex-basis: 25%;
 }
-.popular{
-    padding: 10px;
-  
 
-}
 .popular__container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
+        padding: 10px;
 
 }
 .footer{
