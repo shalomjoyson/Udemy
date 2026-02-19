@@ -85,13 +85,14 @@ body {
   padding: 10px;
   border-radius: 30px;
   cursor: pointer;
-   border: solid darkmagenta 1px;
+  border: solid darkmagenta 1px;
+  transition: 0.7s;
   
 
 }
 
 .categories p:hover{
-  transition: 2s;
+  transition: 0.7s;
   background-color: transparent;
   color: black;
   border: solid darkmagenta 1px;
