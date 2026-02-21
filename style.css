@@ -50,27 +50,30 @@ body {
   gap: 10px;
   align-items: center;
 }
+.navbar__s4{
+  display: none;
+}
 
 /* My Learning Popup*/
-.mylearning
-{
-    position: relative;
-    cursor: pointer;
+.mylearning {
+  position: relative;
+  cursor: pointer;
 }
-.mylearning__popup
-{
-    position: absolute;
-    background-color: white;
-    border: solid black 1px;
-    width: 100px;
-    top: 150%;
-    padding: 20px;
-    right: 0;
-    display: none;
+.mylearning__popup {
+  position: absolute;
+  background-color: white;
+  border: solid black 1px;
+  width: 100px;
+  top: 150%;
+  padding: 20px;
+  right: 0;
+  opacity: 0;
+  display: none;
 }
-.mylearning:hover .mylearning__popup{
-    display: block;
-
+.mylearning:hover .mylearning__popup {
+  transition: all ease-in-out 0.5s;
+  opacity: 1;
+  display: block;
 }
 .categories {
   display: flex;
@@ -87,16 +90,13 @@ body {
   cursor: pointer;
   border: solid darkmagenta 1px;
   transition: 0.7s;
-  
-
 }
 
-.categories p:hover{
+.categories p:hover {
   transition: 0.7s;
   background-color: transparent;
   color: black;
   border: solid darkmagenta 1px;
-  
 }
 
 .hero_img {
@@ -124,17 +124,14 @@ body {
 }
 
 @keyframes zoom {
-  0%{
+  0% {
     transform: scale(0);
     opacity: 0;
-
   }
 
-  100%{
-      opacity: 1;
+  100% {
+    opacity: 1;
     transform: scale(1);
-  
-
   }
 }
 .recommended {
@@ -148,6 +145,9 @@ body {
 }
 .course-card {
   width: 300px;
+  flex-grow: 1;
+  flex-basis: 20%;
+  margin: 5px;
 }
 .course-card img {
   height: 50%;
@@ -204,3 +204,33 @@ body {
   text-decoration: none;
   color: green;
 }
+
+
+/* Media Queries */
+
+@media screen and (max-width:800px) {
+  body{
+    font-size: 10px;
+  }
+  
+
+  
+}
+  @media screen and (max-width:600px) {   
+    .course-card{
+      flex-basis: 40%;
+    }
+    .categories{
+      display: none;
+    }
+    .navbar__s2,.navbar__s3{
+      display: none;
+    }
+    .navbar__s4{
+      display: block;
+    }
+  
+
+  
+}
+
